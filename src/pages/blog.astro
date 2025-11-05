@@ -1,5 +1,9 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+
+const pageTitle = "My Blog Astro";
 ---
 
 <html lang="en">
@@ -11,14 +15,13 @@ import '../styles/global.css';
 		<title>Astro</title>
 	</head>
 	<body>
-		<a href="/">Início</a>
-        <a href="/blog/">Blog</a>
-		<a href="/about/">Sobre</a>
-		<h1>My Blog Astro</h1>
+		<Navigation />
+		<h1>{pageTitle}</h1>
 		<ul>
       		<li><a href="/posts/post-1/">Postagem 1</a></li>
 			<li><a href="/posts/post-2/">Postagem 2</a></li>
 			<li><a href="/posts/post-3/">Postagem 3</a></li>
     	</ul>
+		<Footer />
 	</body>
 </html>
